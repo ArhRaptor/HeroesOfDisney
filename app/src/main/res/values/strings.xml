@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">HeroesOfDisney</string>
+    <string name="app_name">Heroes of Disney</string>
+    <string name="welcome">WELCOME</string>
+    <string name="start">GET STARTED</string>
+    <string name="title_activity_heroes_list">HeroesListActivity</string>
+    <string name="all">All</string>
+    <string name="my">My</string>
+    <string name="img_head">headerImage</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="alies">Alies</string>
+    <string name="enemies">Enemies</string>
+    <string name="films">Films</string>
+    <string name="parks">Park Attractions</string>
+    <string name="short_films">Short films</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="video_games">Video Games</string>
 </resources>
