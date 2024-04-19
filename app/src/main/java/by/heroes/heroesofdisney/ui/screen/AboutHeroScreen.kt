@@ -1,9 +1,15 @@
 package by.heroes.heroesofdisney.ui.screen
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -31,7 +37,7 @@ import by.heroes.heroesofdisney.model.MyHero
 import by.heroes.heroesofdisney.ui.StartViewModel
 import coil.compose.AsyncImage
 
-@SuppressLint("RememberReturnType")
+
 @Composable
 fun AboutHero(
     viewModel: StartViewModel,

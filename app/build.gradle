@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace 'by.heroes.heroesofdisney'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "by.heroes.heroesofdisney"
         minSdk 26
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -30,17 +30,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion '1.5.0'
     }
     packagingOptions {
         resources {
@@ -50,13 +50,13 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.10.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
-    implementation 'androidx.activity:activity-compose:1.7.0'
+    implementation 'androidx.core:core-ktx:1.13.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.activity:activity-compose:1.9.0'
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
-    implementation 'androidx.compose.material3:material3:1.0.1'
-    implementation 'androidx.paging:paging-common-ktx:3.1.1'
+    implementation 'androidx.compose.material3:material3:1.2.1'
+    implementation 'androidx.paging:paging-common-ktx:3.2.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -64,22 +64,23 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
-    implementation "io.coil-kt:coil-compose:2.3.0"
+    implementation 'io.coil-kt:coil-compose:2.6.0'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.11'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.14'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14'
 
-    implementation 'com.google.dagger:hilt-android:2.45'
-    kapt 'com.google.dagger:hilt-android-compiler:2.45'
+    implementation 'com.google.dagger:hilt-android:2.51.1'
+    kapt 'com.google.dagger:hilt-android-compiler:2.51.1'
 
     implementation "androidx.compose.runtime:runtime-livedata:$compose_ui_version"
 
-    def nav_version = "2.5.3"
+    def nav_version = '2.7.7'
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
-    def room_version = '2.5.1'
+    def room_version = '2.6.1'
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
 
@@ -89,13 +90,12 @@ dependencies {
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
 
-    def paging_version = "3.1.1"
+    def paging_version = '3.2.1'
 
-    implementation("androidx.paging:paging-runtime:$paging_version")
+    implementation("androidx.paging:paging-runtime-ktx:$paging_version")
 
     // optional - Jetpack Compose integration
-    implementation("androidx.paging:paging-compose:1.0.0-alpha18")
-
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation('androidx.paging:paging-compose:3.3.0-beta01')
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0'
 
 }

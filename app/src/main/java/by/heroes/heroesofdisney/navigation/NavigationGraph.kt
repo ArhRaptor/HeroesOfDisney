@@ -19,9 +19,7 @@ fun NavigationGraph(
     NavHost(navController = navController, startDestination = START_ROUTE) {
         composable(START_ROUTE) { ShowView(navController) }
         composable(HERO_LIST_ROUTE) { ListHeroes(viewModel, navController) }
-        composable(
-            "$ABOUT_HERO_ROUTE/{id}",
-            arguments = listOf(navArgument("id") { type = NavType.IntType })
+        composable("$ABOUT_HERO_ROUTE/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })
         ) {
             AboutHero(viewModel, savedStateHandle = it)
         }
